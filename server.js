@@ -19,25 +19,25 @@ app.use(cors());
 
 // ===== Public Routes ======
 // Post all public genera token
-app.get(`/RecetaSicor/services/autorizar/login`, (req, res) => {
+app.post(`/RecetaSicor/services/autorizar/login`, (req, res) => {
   res.json(generarToken);
 });
 
 // Post all public Consultar Medicamento
-app.get(`/RecetaSicor/services/recetaSicor/consultaMedicamento`, (req, res) => {
+app.post(`/RecetaSicor/services/recetaSicor/consultaMedicamento`, (req, res) => {
   res.json(consultarMedicamento);
 });
 
 
 
 // Post all public Consultar Medicamento
-app.get(`/RecetaSicor/services/recetaSicor/registrar`, (req, res) => {
+app.put(`/RecetaSicor/services/recetaSicor/registrar`, (req, res) => {
   res.json(registrarReceta);
 });
 
 
 // Post all public Cancelar Receta
-app.get(`/RecetaSicor/services/recetaSicor/cancelar`, (req, res) => {
+app.delete(`/RecetaSicor/services/recetaSicor/cancelar`, (req, res) => {
   res.json(cancelarReceta);
 });
 
